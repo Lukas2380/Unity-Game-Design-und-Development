@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -35,6 +36,8 @@ public class Movement : MonoBehaviour
     // if P key is pressed than set speed t 0
     void Update()
     {
+        if (PauseMenu.IsPaused)
+            return;
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (InPause == false)
