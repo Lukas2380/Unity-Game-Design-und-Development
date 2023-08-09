@@ -21,10 +21,10 @@ public class Player : MonoBehaviour
     {
         if (!PauseMenu.IsPaused)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                TakeDamage(20);
-            }
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //{
+                //TakeDamage(20);
+            //}
         }
     }
 

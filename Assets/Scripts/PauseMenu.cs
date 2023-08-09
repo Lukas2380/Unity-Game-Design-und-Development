@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour
     // If a Main menu is implemented
     public void GoToMainMenu()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void QuitGame()
