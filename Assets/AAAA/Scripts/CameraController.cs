@@ -36,18 +36,14 @@ public class CameraController : MonoBehaviour
         transform.rotation = smoothedRotation;
 
         // Perform collision detection to prevent camera clipping through obstacles
-        Vector3 dir = transform.position - target.position;
-        Vector3 desiredCameraPosition = target.position + dir.normalized * distance;
-        Vector3 cameraToTarget = desiredCameraPosition - target.position;
+        //Vector3 dir = transform.position - target.position;
+        //Vector3 desiredCameraPosition = target.position + dir.normalized * distance;
+        //Vector3 cameraToTarget = desiredCameraPosition - target.position;
 
-        RaycastHit hit;
-        if (Physics.Raycast(target.position, cameraToTarget, out hit, distance, collisionLayers))
-        {
-            // Calculate adjusted position to prevent clipping
-            Vector3 adjustedPosition = hit.point + hit.normal * collisionOffset;
-
-            // Smoothly move the camera to the adjusted position using Lerp
-            transform.position = Vector3.Lerp(transform.position, adjustedPosition, smoothSpeed);
-        }
+        //RaycastHit hit;
+        //if (Physics.Raycast(target.position, cameraToTarget, out hit, distance, collisionLayers))
+        //{ // Calculate adjusted position to prevent clippingVector3 adjustedPosition = hit.point + hit.normal * collisionOffset;// Smoothly move the camera to the adjusted position using Lerp
+          //  transform.position = Vector3.Lerp(transform.position, adjustedPosition, smoothSpeed);
+        //}
     }
 }

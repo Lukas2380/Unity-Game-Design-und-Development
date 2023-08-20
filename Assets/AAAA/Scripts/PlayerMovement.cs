@@ -27,13 +27,6 @@ public class PlayerMovement : MonoBehaviour
     {
         HandlePause();
 
-        //float horizontal_movment = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime;
-        //float vertical_movement = Input.GetAxisRaw("Vertical") * speed * Time.deltaTime;
-        //transform.Translate(horizontal_movment, 0, vertical_movement);
-
-        //rotation.y += Input.GetAxis("Mouse X");
-        //transform.eulerAngles = (Vector2)rotation * speed1;
-        
         // Check if the player is grounded
         if (IsGrounded())
         {
@@ -75,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics.CheckSphere(GroundCheck.position, 0.1f, ground);
+        return Physics.CheckSphere(GroundCheck.position, 0.5f, ground);
     }
 
     void CharacterMovement()
